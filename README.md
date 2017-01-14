@@ -7,7 +7,7 @@ Allows to get the same kind of delta with easy to spot deltas in large datasets 
 ## LICENSE
 
 Copyright 2017 Robert Dober &lt;robert.dober@gmail.com>
+
 Copyright 2012 Platformatech
 
-As imposed by the original license APACHE 2. See file LICENSE for details
-
+As imposed by the original license,  APACHE 2. See file LICENSE for details.

@@ -1,7 +1,5 @@
-
 # frozen_string_literal: true
-require_relative '../lib/redis_cloud_auto_upgrade'
-HerokuAPI = RedisCloudAutoUpgrade::HerokuAPI
+require_relative '../lib/lab42/diff'
 
 PROJECT_ROOT = File.expand_path '../..', __FILE__
 Dir[File.join(PROJECT_ROOT, 'spec/support/**/*.rb')].each { |f| require f }
