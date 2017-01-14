@@ -2,7 +2,7 @@ require "spec_helper"
 
 class User
   def to_s
-    repr
+    @repr
   end
 
   private
@@ -18,8 +18,11 @@ RSpec.describe "script" do
   describe "objects" do
     user1 = User.new("user 1")
     user2 = User.new("user 2")
-    expected = [[:eq, "User<"], [[[:eq, "user"], [:del, "1", :ins, "2"]]], [:eq, "}"]]
-    script user1, user2, expected
+    script user1, user2, nil
+
+    expected = [:eq, "user 1"]
+    script user1, user1, expected
+
     script User.new, {}, nil
     script User.new, Object.new, nil
   end
