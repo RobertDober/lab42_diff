@@ -1,3 +1,5 @@
+require_relative 'diff/myers'
+
 module Lab42
   module Diff extend self
 
@@ -29,9 +31,6 @@ module Lab42
       [bag_difference(bag1, bag2), bag_difference(bag2, bag1)].max
     end
 
-    def myers_difference lhs, rhs
-      []
-    end
 
     def script_by_kind lhs, rhs
       case lhs.class
@@ -42,7 +41,7 @@ module Lab42
 
     def script_strings lhs, rhs
       unless strings_too_different?(lhs, rhs)
-        [:eq, '"', *myers_difference(lhs, rhs), :eq, '"']
+        [:eq, '"', *Myers.difference(lhs, rhs), :eq, '"']
       end
     end
 

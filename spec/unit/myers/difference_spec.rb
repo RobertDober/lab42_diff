@@ -1,6 +1,6 @@
 require "spec_helper"
 
-def mdiff(lhs, rhs); Lab42::Diff.send(:myers_difference, lhs, rhs) end
+def mdiff(lhs, rhs); Lab42::Diff::Myers.difference( lhs, rhs) end
 
 # Myers difference specs copied from Elixir source c.f. LICENCE
 RSpec.describe "myers difference" do 
